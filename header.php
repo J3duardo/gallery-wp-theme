@@ -15,7 +15,9 @@
           <a href="<?php echo get_site_url("/")?>"><h1><?php bloginfo("name")?></h1></a>
         </div>
         <div class="w3-col m3 l3">
-          <input type="text" class="w3-input" placeholder="Search">
+          <form method="GET" action="<?php echo esc_url(home_url("/"))?>">
+            <input type="text" name="s" class="w3-input" placeholder="Search">        
+          </form>
         </div>
       </div>
     </header>
