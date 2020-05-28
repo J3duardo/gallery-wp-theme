@@ -1,0 +1,62 @@
+/*
+  Theme Name: Gallery Theme
+  Author: Jesús Eduardo
+  Description: A simple image gallery wordpress theme
+  Version: 1.0
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  color: #333;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+aside.sidebar {
+  padding-right: 20px;
+}
+
+/* Cada imagen de la galería */
+.gallery-item {
+  display: block;
+  max-width: 100%;
+  width: 380px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+header.w3-container .w3-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pic {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #333;
+}
