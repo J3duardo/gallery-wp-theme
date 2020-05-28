@@ -32,17 +32,7 @@ img {
 }
 
 aside.sidebar {
-  padding-right: 20px;
-}
-
-/* Cada imagen de la galería */
-.gallery-item {
-  display: block;
-  max-width: 100%;
-  width: 380px;
-  height: 300px;
-  object-fit: cover;
-  object-position: center;
+  padding-right: 10px;
 }
 
 header.w3-container .w3-row {
@@ -52,8 +42,23 @@ header.w3-container .w3-row {
 }
 
 .pic {
+  padding: 10px;
   text-align: center;
 }
+
+/* Cada imagen de la galería */
+.pic img {
+  display: block;
+  max-width: 100%;
+  width: 380px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* .post-content {
+  padding: 0 10px;
+} */
 
 footer {
   text-align: center;
