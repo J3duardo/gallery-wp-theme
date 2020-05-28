@@ -1,0 +1,18 @@
+<div class="w3-col m4 l4 pic">
+  <?php if(has_post_thumbnail()) : ?>
+    <div class="post-thumbnail">
+      <?php
+        $attr = array(
+          "class" => "w3-animate-opacity w3-hover-opacity"
+        );
+      ?>
+      <a href="<?php echo the_permalink() ?>">
+        <?php the_post_thumbnail($id, "large", $attr)?>
+      </a>
+    </div>
+  <?php endif ?>
+  
+  <div class="post-content">
+    <?php the_content() ?>
+  </div>
+</div>
