@@ -1,5 +1,5 @@
     <footer>
-      <p><?php bloginfo("name")?> &copy; 2020</p>
+      <p><?php bloginfo("name")?> &copy; <?php echo get_the_date("Y")?></p>
     </footer>
   </body>
 </html>
