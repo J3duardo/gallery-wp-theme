@@ -12,7 +12,7 @@
     <header class="w3-container w3-teal">
       <div class="w3-row">
         <div class="w3-col m9 l9">
-          <h1><?php bloginfo("name")?></h1>
+          <a href="<?php echo get_site_url("/")?>"><h1><?php bloginfo("name")?></h1></a>
         </div>
         <div class="w3-col m3 l3">
           <input type="text" class="w3-input" placeholder="Search">
@@ -21,13 +21,9 @@
     </header>
 
     <div class="w3-row">
-      <!-- Sidebar -->
+      <!-- Sidebar widget -->
       <aside class="w3-col m3 l3 sidebar">
-        <ul class="w3-ul">
-          <li><a href="#">Nature</a></li>
-          <li><a href="#">Animals</a></li>
-          <li><a href="#">Objects</a></li>
-          <li><a href="#">People</a></li>
-          <li><a href="#">Abstract</a></li>
-        </ul>
+        <?php if(is_active_sidebar("sidebar")) : ?>
+          <?php dynamic_sidebar("sidebar")?>
+        <?php endif ?>
       </aside>
