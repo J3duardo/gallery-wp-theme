@@ -1,50 +1,19 @@
 <?php get_header() ?>
-      <main>
-        <!-- Galería de imágenes -->
-        <section class="w3-col m9 l9">
-          <!-- Fila 1 de imagenes de la galería -->
-          <article class="w3-row">
-            <div class="w3-col m4 l4 pic">
-              <a href="/single.html">
-                <img class="gallery-item w3-animate-opacity" src="/images/1.jpg" alt="">            
-              </a>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis accusantium sunt totam?</p>
-            </div>
-            <div class="w3-col m4 l4 pic">
-              <a href="/single.html">
-                <img class="gallery-item w3-animate-opacity" src="/images/2.jpg" alt="">            
-              </a>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis accusantium sunt totam?</p>           
-            </div>
-            <div class="w3-col m4 l4 pic">
-              <a href="/single.html">
-                <img class="gallery-item w3-animate-opacity" src="/images/3.jpg" alt="">            
-              </a>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis accusantium sunt totam?</p>
-            </div>
-          </article>
-          <!-- Fila 2 de imagenes de la galería -->
-          <article class="w3-row">
-            <div class="w3-col m4 l4 pic">
-              <a href="/single.html">
-                <img class="gallery-item w3-animate-opacity" src="/images/4.jpg" alt="">            
-              </a>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis accusantium sunt totam?</p>
-            </div>
-            <div class="w3-col m4 l4 pic">
-              <a href="/single.html">
-                <img class="gallery-item w3-animate-opacity" src="/images/5.jpg" alt="">            
-              </a>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis accusantium sunt totam?</p>           
-            </div>
-            <div class="w3-col m4 l4 pic">
-              <a href="/single.html">
-                <img class="gallery-item w3-animate-opacity" src="/images/6.jpg" alt="">            
-              </a>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis accusantium sunt totam?</p>
-            </div>
-          </article>
-        </section>
-      </main>
-    </div>
-<?php get_footer() ?>
+
+  <main class="w3-col m9 l9">
+    <section>
+      <?php if(have_posts()) : ?>
+        <?php while(have_posts()) : the_post() ?>
+          <?php get_template_part("template-parts/content", get_post_format()) ?>
+        <?php endwhile ?>
+      <?php else : ?>
+        <?php echo wpautop("No posts found.") ?>
+      <?php endif ?>
+    </section>
+  </main>
+</div>
+
+<!-- Mostrar barra de administración (admin bar) -->
+<?php wp_footer()?>
+
+<?php get_footer()?>
